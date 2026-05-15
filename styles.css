@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
 
+/* Design tokens used across the static page for consistent color, spacing, and layout width. */
 :root {
   --blue: #2B3990;
   --blue-dark: #1f2a6b;
@@ -18,6 +19,7 @@
   --container: 1240px;
 }
 
+/* Base reset and shared element behavior. */
 * {
   box-sizing: border-box;
 }
@@ -80,6 +82,7 @@ img {
   padding-top: 77px;
 }
 
+/* Fixed desktop header; the mobile header is hidden to match the supplied mobile frames. */
 .site-header {
   position: fixed;
   top: 0;
@@ -218,6 +221,7 @@ img {
   font-size: 14px !important;
 }
 
+/* Hero/product summary area with responsive gallery, certifications, and pricing content. */
 .hero-section {
   position: relative;
   padding: 0 16px;
@@ -596,6 +600,7 @@ img {
   display: none;
 }
 
+/* Reusable section rhythm shared by the main content bands. */
 .technical-section,
 .features-section,
 .faq-section,
@@ -761,6 +766,7 @@ td:nth-child(2) {
   white-space: nowrap;
 }
 
+/* FAQ accordion styles. JavaScript controls the open state through .is-open. */
 .faq-section {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -854,6 +860,7 @@ td:nth-child(2) {
   font-size: 14px;
 }
 
+/* Horizontal application carousel. Rows intentionally extend past the viewport in mobile references. */
 .versatile-section {
   padding: 48px 0;
   border-bottom: 1px solid var(--border);
@@ -936,6 +943,7 @@ td:nth-child(2) {
   background: #fff;
 }
 
+/* HDPE process stepper. Mobile backgrounds are scoped in media queries below. */
 .hdpe-section {
   background: transparent;
 }
@@ -1070,6 +1078,7 @@ td:nth-child(2) {
   color: var(--black);
 }
 
+/* Testimonials carousel uses cloned cards in JavaScript for continuous auto-scroll. */
 .performance-section {
   padding: 48px 0;
   border-bottom: 1px solid var(--border);
@@ -1246,6 +1255,7 @@ td:nth-child(2) {
   padding: 0 0 12px;
 }
 
+/* Mobile layout changes for the supplied 360px-focused frames. */
 @media (max-width: 767px) {
   .site-header {
     display: none;
@@ -1351,6 +1361,7 @@ td:nth-child(2) {
   }
 }
 
+/* Pixel-specific refinements for the narrow assignment frames. */
 @media (max-width: 360px) {
   .contact-section {
     position: relative;
@@ -1531,6 +1542,7 @@ td:nth-child(2) {
   font-weight: 500;
 }
 
+/* Footer and modal styles are kept framework-free so the page opens directly in a browser. */
 .footer-section {
   padding: 48px 16px 0;
 }

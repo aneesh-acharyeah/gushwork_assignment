@@ -1,3 +1,4 @@
+// Centralized page data keeps repeated UI controls in sync without hard-coding DOM fragments.
 const galleryImages = [
   { id: 1, url: "images/hero_first_image.png", alt: "HDPE Pipes - View 1" },
   { id: 2, url: "images/hero_second_image.jpg", alt: "Pipeline Infrastructure - View 2" },
@@ -66,6 +67,7 @@ const processSteps = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize each independent behavior after the static HTML is ready.
   initStickyHeader();
   initMobileMenu();
   initModals();
@@ -131,6 +133,7 @@ function initMobileProductSummary() {
   if (!summary || !hero) return;
 
   const updateSummary = () => {
+    // The supplied mobile fold shows this summary only before the user scrolls.
     const isMobile = window.innerWidth < 768;
     const shouldShow = isMobile && window.scrollY === 0;
     summary.classList.toggle("is-visible", shouldShow);
@@ -179,6 +182,7 @@ function initModals() {
     if (firstField) firstField.focus();
   };
 
+  // Only explicitly wired buttons open modals, matching the assignment references.
   openButtons.forEach((button) => {
     if (button.dataset.openModal === "callback" || button.dataset.openModal === "catalogue") return;
     button.addEventListener("click", () => openModal(button.dataset.openModal, button));
@@ -215,6 +219,7 @@ function initGallery() {
 
   let currentIndex = 0;
 
+  // Thumbnails are generated from the same data source as the main image carousel.
   galleryImages.forEach((item, index) => {
     const button = document.createElement("button");
     button.type = "button";
@@ -292,6 +297,7 @@ function initFaq() {
     button.addEventListener("click", () => {
       const willOpen = !item.classList.contains("is-open");
 
+      // Keep the accordion single-open so the section remains compact on mobile.
       faqItems.forEach((faq) => {
         faq.classList.remove("is-open");
         faq.querySelector("button").setAttribute("aria-expanded", "false");
@@ -326,6 +332,7 @@ function initTestimonialAutoScroll() {
   const originalCards = Array.from(row.children);
   if (originalCards.length === 0) return;
 
+  // Clone the cards once to create a seamless loop without visual indicators.
   originalCards.forEach((card) => {
     row.append(card.cloneNode(true));
   });
@@ -389,6 +396,7 @@ function initProcessStepper() {
 
   let currentStep = 0;
 
+  // Desktop step buttons are generated from the process data so labels and content stay aligned.
   processSteps.forEach((step, index) => {
     const button = document.createElement("button");
     button.type = "button";
@@ -443,6 +451,7 @@ function initProcessStepper() {
 }
 
 function initPlaceholderActions() {
+  // Forms and non-navigating buttons keep the prototype interactive without backend dependencies.
   document.querySelectorAll("form").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();

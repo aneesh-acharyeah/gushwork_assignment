@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Fixed desktop navigation. Mobile frames omit the header, so CSS hides it below tablet width. -->
   <header class="site-header" data-sticky-header>
     <div class="container header-inner">
       <img src="images/mobile_logo.svg" alt="Gushwork logo">
@@ -39,6 +40,7 @@
   </nav>
 
   <main class="page-shell">
+    <!-- Product hero: gallery, certifications, pricing, and primary actions. -->
     <section class="hero-section">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -127,6 +129,7 @@
       </div>
     </section>
 
+    <!-- Mobile-only summary shown at the top of the page before scrolling. -->
     <aside class="mobile-product-summary" aria-label="Product summary">
       <img src="images/hero_first_image.png" alt="Premium HDPE Pipes & Coils">
       <div>
@@ -135,6 +138,7 @@
       </div>
     </aside>
 
+    <!-- Technical specification table and datasheet action. -->
     <section class="technical-section">
       <div class="container">
         <div class="section-copy left-copy">
@@ -170,6 +174,7 @@
       </div>
     </section>
 
+    <!-- Product benefit cards. -->
     <section class="features-section">
       <div class="container">
         <div class="section-copy left-copy">
@@ -188,6 +193,7 @@
       </div>
     </section>
 
+    <!-- Accessible FAQ accordion. -->
     <section class="faq-section">
       <div class="container">
         <h4><span>Frequently</span> Asked Questions</h4>
@@ -227,6 +233,7 @@
       </div>
     </section>
 
+    <!-- Horizontally scrolling application cards. -->
     <section class="versatile-section">
       <div class="wide-container">
         <div class="carousel-heading">
@@ -252,6 +259,7 @@
       </div>
     </section>
 
+    <!-- HDPE manufacturing process stepper. -->
     <section class="hdpe-section">
       <div class="container">
         <div class="section-copy centered-copy">
@@ -282,6 +290,7 @@
       </div>
     </section>
 
+    <!-- Auto-scrolling testimonial carousel. -->
     <section class="performance-section">
       <div class="section-copy centered-copy padded-copy">
         <h6>Trusted Performance. Proven Results</h6>
@@ -299,6 +308,7 @@
       </div>
     </section>
 
+    <!-- Related solution cards and expert CTA. -->
     <section class="solutions-section">
       <div class="container">
         <div class="section-copy centered-copy">
@@ -323,6 +333,7 @@
       </div>
     </section>
 
+    <!-- Downloadable resource list with placeholder download handlers. -->
     <section class="resources-section">
       <div class="container">
         <div class="section-copy centered-copy">
@@ -337,6 +348,7 @@
       </div>
     </section>
 
+    <!-- Contact form section. Narrow mobile texture is scoped in CSS media queries. -->
     <section class="contact-section">
       <div class="container">
         <div class="contact-card">
@@ -388,6 +400,7 @@
     </div>
   </footer>
 
+  <!-- Modal layer reused by the catalogue and callback forms. -->
   <div class="modal-layer" data-modal-layer aria-hidden="true">
     <div class="modal-backdrop" data-modal-close></div>
 
