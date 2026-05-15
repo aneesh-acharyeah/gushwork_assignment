@@ -24,7 +24,3 @@ Open `index.html` directly in a browser. No build step, framework, package manag
 - HDPE manufacturing process stepper
 - Callback and catalogue modals attached only to their required buttons
 - Static contact form with placeholder submit handling
-
-## Notes
-
-The implementation is based on the provided React reference codebase because the Figma file is not available in this environment. The page uses vanilla HTML, CSS, and JavaScript only.
