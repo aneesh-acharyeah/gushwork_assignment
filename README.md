@@ -1,6 +1,6 @@
 # Gushwork Web Development Assignment
 
-This is a vanilla HTML, CSS, and JavaScript implementation of the provided Gushwork assignment reference.
+This is a vanilla HTML, CSS, and JavaScript implementation of the Gushwork web development assignment.
 
 ## Files
 
